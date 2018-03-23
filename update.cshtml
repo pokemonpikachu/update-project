@@ -1,0 +1,102 @@
+@model team9project2.Models.tbl2_subsc_team9
+@{
+    ViewBag.Title = "Update";
+}
+@using (Html.BeginForm())
+{
+
+foreach (var v in ViewBag.T)
+{
+
+<h2>Update</h2>
+    <div>
+        @Html.LabelFor(a => a.subid)
+        <div>
+            @Html.TextBoxFor(a => a.subid,new { @disabled="disabled"})
+            @Html.ValidationMessageFor(a => a.subid)
+        </div>
+    </div>
+
+    <div>
+        @Html.LabelFor(a => a.name)
+        <div>
+            @Html.TextBoxFor(a => a.name, new { Value = @v.name })
+            @Html.ValidationMessageFor(a => a.name)
+        </div>
+    </div>
+
+    <div>
+        @Html.LabelFor(a => a.dob)
+        <div>
+            @Html.TextBoxFor(a => a.dob, new { Value = @v.dob })
+            @Html.ValidationMessageFor(a => a.dob)
+        </div>
+    </div>
+
+    <div>
+        @Html.LabelFor(a => a.contact_num)
+        <div>
+            @Html.TextBoxFor(a => a.contact_num, new { Value = @v.contact_num })
+            @Html.ValidationMessageFor(a => a.contact_num)
+        </div>
+    </div>
+
+    <div>
+        @Html.LabelFor(a => a.email)
+        <div>
+            @Html.TextBoxFor(a => a.email, new {Value = @v.email })
+            @Html.ValidationMessageFor(a => a.email)
+        </div>
+    </div>
+
+    <div>
+
+        @Html.LabelFor(a => a.sim_no)
+        <div>
+            @Html.TextBoxFor(a => a.sim_no ,new { Value = @v.sim_no })
+            @Html.ValidationMessageFor(a => a.sim_no)
+        </div>
+    </div>
+    <div>
+        @Html.LabelFor(a => a.addr1)
+        <div>
+            @Html.TextBoxFor(a => a.addr1, new { Value = @v.addr1 })
+            @Html.ValidationMessageFor(a => a.addr1)
+        </div>
+    </div>
+
+    <div>
+        @Html.LabelFor(a => a.addr2)
+        <div>
+            @Html.TextBoxFor(a => a.addr2, new { Value = @v.addr2 })
+            @Html.ValidationMessageFor(a => a.addr2)
+        </div>
+    </div>
+
+    <div>
+        @Html.LabelFor(a => a.city)
+        <div>
+            @Html.TextBoxFor(a => a.city, new { Value = @v.city })
+            @Html.ValidationMessageFor(a => a.city)
+        </div>
+    </div>
+    <div>
+        @Html.LabelFor(a => a.pincode)
+        <div>
+            @Html.TextBoxFor(a => a.pincode, new { Value = @v.pincode})
+            @Html.ValidationMessageFor(a => a.pincode)
+        </div>
+    </div>
+    <div>
+        @Html.LabelFor(a => a.stat)
+        <div>
+            @Html.TextBoxFor(a => a.stat, new { Value = @v.stat })
+            @Html.ValidationMessageFor(a => a.stat)
+        </div>
+    </div>
+    <div>
+        <input type="submit" value="Update" />
+    </div>
+
+}
+}
